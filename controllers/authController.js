@@ -143,8 +143,8 @@ export const testController = (req, res) => {
 }
 export const forget_password = async(req, res) => {
     try {
-        // const email = req.body.email;
-        const email = "k.saranshchauhan@gmail.com";
+        const email = req.body.email;
+        // const email = "k.saranshchauhan@gmail.com";
         const userData = await userModel.findOne({ email: email })
         if (userData) {
             const randomString = randomstring.generate();
@@ -165,7 +165,6 @@ export const reset_password = async(req, res) => {
         if (tokenData) {
             const newPassword = req.body.password;
             // const newPassword = await hashPassword(password);
-            // const newPassword = await securePassword(password);
             const userData = await userModel.findByIdAndUpdate({ _id: tokenData._id }, { $set: { password: newPassword, token: '' } }, {})
             res.status(200).send({ success: true, msg: "User password has been reset", data: userData });
         } else {
