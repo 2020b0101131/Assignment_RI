@@ -42,6 +42,3 @@ Unlock the potential of your web app with our Node.js REST API project. Your jou
 
 🚀 **Elevate Your Backend Today!** 🚀
 
----
-
-Remember to replace `<your-username>` and `<your-repo>` with your actual GitHub username and repository name in the advertisement. This advertisement can be used on your project's website, social media, or other promotional channels to attract developers and users to explore your project.
